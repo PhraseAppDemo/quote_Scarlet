@@ -1,0 +1,13 @@
+phraseapp:
+  access_token: cbcda111d957d8e150ad2779080c80d888a4c82caf02587504a1447da497864f
+  project_id: 0a057f486f0781e2617fde5179386ced
+  push:
+    sources:
+    - file: ./quote/<locale_code>.lproj/Localizable.strings
+      params:
+        file_format: strings
+  pull:
+    targets:
+    - file: ./quote/<locale_code>.lproj/Localizable.strings
+      params:
+        file_format: strings

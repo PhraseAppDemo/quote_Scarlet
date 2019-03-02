@@ -16,8 +16,8 @@ class MainView: BaseView {
     
     override func commonInit() {
         super.commonInit();
-        self.authorLabel.text = "Antoine St. Exepury";
-        self.quoteLabel.text = "Man sieht nur mit dem Herzen gut.";
+        self.authorLabel.text = "Banksy";
+        self.quoteLabel.text = NSLocalizedString("quote", comment: "");
     }
     override func addSubviews() {
         self.addSubview(quoteLabel);
@@ -27,8 +27,10 @@ class MainView: BaseView {
     override func stylize() {
         self.backgroundColor = UIColor.purple;
         self.quoteLabel.textColor = UIColor.white;
-        self.quoteLabel.textAlignment = .center;
+        self.quoteLabel.textAlignment = .left;
         self.quoteLabel.font = font;
+        self.quoteLabel.lineBreakMode = .byWordWrapping;
+        self.quoteLabel.numberOfLines = 0;
         self.authorLabel.textColor = UIColor.white;
         self.authorLabel.textAlignment = .right;
         self.authorLabel.font = authorLabelFont;
@@ -36,8 +38,9 @@ class MainView: BaseView {
     override func setupConstraints() {
         self.quoteLabel.snp.makeConstraints { make in
             make.center.equalToSuperview();
-            make.leading.equalToSuperview();
-            make.trailing.equalToSuperview();
+            make.leading.equalToSuperview().offset(10);
+            make.trailing.equalToSuperview().offset(-10);
+            
         }
         self.authorLabel.snp.makeConstraints{make in
             make.top.equalTo(self.quoteLabel.snp.bottom).offset(10);

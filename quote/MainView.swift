@@ -18,8 +18,8 @@ class MainView: BaseView {
     
     override func commonInit() {
         super.commonInit();
-        self.authorLabel.text = NSLocalizedString("author", comment: "");
-        self.quoteLabel.text = NSLocalizedString("quote", comment: "");
+        self.authorLabel.text = NSLocalizedString("author1", comment: "");
+        self.quoteLabel.text = NSLocalizedString("quote1", comment: "");
     }
     override func addSubviews() {
         self.addSubview(quoteLabel);

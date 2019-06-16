@@ -13,7 +13,7 @@ class MainViewController: UIViewController {
     let mainView = MainView();
     
     // Liste
-    let quotes = [NSLocalizedString("quote", comment: ""), NSLocalizedString("quote", comment: "")];
+    let quotes = [NSLocalizedString("quote1", comment: ""), NSLocalizedString("quote2", comment: "")];
     
     override func loadView() {
         self.view = self.mainView

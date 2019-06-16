@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PhraseApp
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        PhraseApp.shared.setup(
+            distributionID: "7b13d58caccaa5324df20b05f35ec2ee",
+            environmentToken: "Bm-Dc1ODjpH-TqurGXLlEsSGaV_idLcArIvaIEr9jxo"
+        )
+        PhraseApp.shared.debugMode = true
+        do {
+            try PhraseApp.shared.updateTranslations { result in
+                switch result {
+                case .success(let updated):
+                    print("success")
+                case .failure:
+                    print("failure")
+                }
+            }
+        } catch {
+            print("error getting translations")
+        }
+
         window = UIWindow(frame: UIScreen.main.bounds);
         let homeViewController = MainViewController();
         window!.rootViewController = homeViewController;

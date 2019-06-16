@@ -26,7 +26,7 @@ class MainViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(loadNewQuote))
         self.mainView.logoImageView.isUserInteractionEnabled = true
         self.mainView.logoImageView.addGestureRecognizer(tapGesture)
-        self.mainView.quoteLabel.text = self.quotes[0]
+//        self.mainView.quoteLabel.text = self.quotes[0].getText()
     }
     
     @objc func loadNewQuote() {
@@ -39,12 +39,24 @@ class MainViewController: UIViewController {
         }
         
         // TODO split into components componentsSeparatedBySgtring(":")
-        let components = randomquote!.components(separatedBy: ":")
-        let text = components[1]
-        let author = components[0]
+//        let components = randomquote!.components(separatedBy: ":")
         
-        self.mainView.authorLabel.text = author
-        self.mainView.quoteLabel.text = text
+        self.mainView.authorLabel.text = randomquote!.getAuthor()
+        self.mainView.quoteLabel.text = randomquote!.getText()
     }
 }
+
+extension String {    
+    func getAuthor() -> String {
+        let components = self.components(separatedBy: ":")
+        return components[0]
+    }
+    
+    func getText() -> String {
+        let components = self.components(separatedBy: ":")
+        return components[1]
+    }
+}
+
+
 

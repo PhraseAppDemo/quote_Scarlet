@@ -18,8 +18,9 @@ class MainView: BaseView {
     
     override func commonInit() {
         super.commonInit();
-        self.authorLabel.text = NSLocalizedString("author1", comment: "");
-        self.quoteLabel.text = NSLocalizedString("quote1", comment: "");
+        let quote = NSLocalizedString("quote1", comment: "")
+        self.authorLabel.text = quote.getAuthor();
+        self.quoteLabel.text = quote.getText();
     }
     override func addSubviews() {
         self.addSubview(quoteLabel);
@@ -38,7 +39,7 @@ class MainView: BaseView {
         self.authorLabel.textAlignment = .right;
         self.authorLabel.font = authorLabelFont;
         
-        self.logoImageView.image = UIImage(named: "logo.jpg")
+        self.logoImageView.image = UIImage(named: "logo.png")
     }
     override func setupConstraints() {
         self.quoteLabel.snp.makeConstraints { make in
@@ -55,7 +56,7 @@ class MainView: BaseView {
         
         self.logoImageView.snp.makeConstraints{ make in
             make.top.equalTo(self.quoteLabel.snp.bottom).offset(30)
-            make.width.height.equalTo(50)
+            make.width.height.equalTo(100)
             make.centerX.equalTo(self)                        
         }
     }

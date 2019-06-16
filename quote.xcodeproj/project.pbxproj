@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB8AF03122B64CFF004CCA5A /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CB8AF03022B64CFF004CCA5A /* logo.jpg */; };
 		CB8F4FC3222A82AD008C6957 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8F4FC2222A82AD008C6957 /* AppDelegate.swift */; };
 		CB8F4FC5222A82AD008C6957 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8F4FC4222A82AD008C6957 /* MainViewController.swift */; };
 		CB8F4FCA222A82AE008C6957 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB8F4FC9222A82AE008C6957 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 		2B797EE882BB821C43410BCA /* Pods-quote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quote.debug.xcconfig"; path = "Target Support Files/Pods-quote/Pods-quote.debug.xcconfig"; sourceTree = "<group>"; };
 		37141743205F6E823FD25A42 /* Pods-quote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quote.release.xcconfig"; path = "Target Support Files/Pods-quote/Pods-quote.release.xcconfig"; sourceTree = "<group>"; };
 		C5895D9AACEACFB5C1D9F163 /* Pods_quote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_quote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB8AF03022B64CFF004CCA5A /* logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo.jpg; sourceTree = "<group>"; };
 		CB8F4FBF222A82AD008C6957 /* quote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB8F4FC2222A82AD008C6957 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB8F4FC4222A82AD008C6957 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		CB8F4FC1222A82AD008C6957 /* quote */ = {
 			isa = PBXGroup;
 			children = (
+				CB8AF03022B64CFF004CCA5A /* logo.jpg */,
 				CB8F4FD9222A9157008C6957 /* BaseView.swift */,
 				CB8F4FD8222A9157008C6957 /* MainView.swift */,
 				CB8F4FC2222A82AD008C6957 /* AppDelegate.swift */,
@@ -132,6 +135,7 @@
 				TargetAttributes = {
 					CB8F4FBE222A82AD008C6957 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -160,6 +164,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB8AF03122B64CFF004CCA5A /* logo.jpg in Resources */,
 				CB8F4FCD222A82AE008C6957 /* LaunchScreen.storyboard in Resources */,
 				CB8F4FE0222AE983008C6957 /* Localizable.strings in Resources */,
 				CB8F4FCA222A82AE008C6957 /* Assets.xcassets in Resources */,
@@ -384,7 +389,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.khaleesi.quote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -402,7 +407,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.khaleesi.quote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -11,17 +11,28 @@ import UIKit
 class MainViewController: UIViewController {
     
     let mainView = MainView();
+    
+    // Liste
+    let quotes = [NSLocalizedString("quote", comment: ""), NSLocalizedString("quote", comment: "")];
+    
     override func loadView() {
-        self.view = self.mainView;
-        
+        self.view = self.mainView
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(loadNewQuote))
+        self.mainView.logoImageView.isUserInteractionEnabled = true
+        self.mainView.logoImageView.addGestureRecognizer(tapGesture)
+        
+        self.mainView.quoteLabel.text = self.quotes[0]
     }
-
-
+    
+    @objc func loadNewQuote() {
+        print("load new quote")
+        self.mainView.quoteLabel.text = self.quotes[1]
+    }
 }
 

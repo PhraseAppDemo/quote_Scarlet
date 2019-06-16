@@ -13,8 +13,8 @@ class MainViewController: UIViewController {
     let mainView = MainView();
     
     // Liste
-    let quotes = [NSLocalizedString("quote1", comment: ""), NSLocalizedString("quote2", comment: "")];
-    
+    let quotes = [NSLocalizedString("quote1", comment: ""), NSLocalizedString("quote2", comment: ""), NSLocalizedString("quote3", comment: "")];
+        
     override func loadView() {
         self.view = self.mainView
     }
@@ -32,7 +32,9 @@ class MainViewController: UIViewController {
     
     @objc func loadNewQuote() {
         print("load new quote")
-        self.mainView.quoteLabel.text = self.quotes[1]
+        let randomquote = quotes.randomElement()!
+        
+        self.mainView.quoteLabel.text = randomquote
     }
 }
 

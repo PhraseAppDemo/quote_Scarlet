@@ -31,13 +31,20 @@ class MainViewController: UIViewController {
     
     @objc func loadNewQuote() {
         print("load new quote")
-        let randomquote = quotes.randomElement()!
-        let actualquote = "quote1"
-        while randomquote == actualquote{
-            let randomquote = quotes.randomElement()!
-        }
-        self.mainView.quoteLabel.text = randomquote
+        var randomquote = self.mainView.quoteLabel.text
         let actualquote = randomquote
+        
+        while randomquote == actualquote {
+            randomquote = quotes.randomElement()!
+        }
+        
+        // TODO split into components componentsSeparatedBySgtring(":")
+        let components = randomquote!.components(separatedBy: ":")
+        let text = components[1]
+        let author = components[0]
+        
+        self.mainView.authorLabel.text = author
+        self.mainView.quoteLabel.text = text
     }
 }
 

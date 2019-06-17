@@ -1,5 +1,4 @@
 phraseapp:
-  access_token: cf776254a4d3ddeacc6daded6239625a8b061e35dd5b8bfd15529deb5600f0ef
   project_id: e25055f7968f4745614c362bdc11f8b6
   push:
     sources:

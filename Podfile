@@ -7,5 +7,5 @@ target 'quote' do
 
   # Pods for quote
   pod 'SnapKit'
-  pod 'PhraseApp', '1.1.2'
+  pod 'PhraseApp', '2.0.0'
 end

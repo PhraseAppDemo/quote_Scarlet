@@ -1,20 +1,20 @@
 PODS:
-  - PhraseApp (1.2.1)
+  - PhraseSDK (2.0.0)
   - SnapKit (5.0.1)
 
 DEPENDENCIES:
-  - PhraseApp (= 1.2.1)
+  - PhraseSDK (= 2.0.0)
   - SnapKit
 
 SPEC REPOS:
   trunk:
-    - PhraseApp
+    - PhraseSDK
     - SnapKit
 
 SPEC CHECKSUMS:
-  PhraseApp: 44631681eaefeec20448b116aeb2ae027a8a2766
+  PhraseSDK: 8f039a06bd9071a433d029ada90e7ac7c32e3ecb
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: fbde3743ad608127bba587f2b2e653f47ad51b69
+PODFILE CHECKSUM: 51980c702649eb44d0ed1aa7a7d680f9e84579cb
 
 COCOAPODS: 1.8.4
